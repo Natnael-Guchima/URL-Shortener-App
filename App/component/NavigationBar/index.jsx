@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
+import colors from '../../config/colors';
 
 function NavigationBar({title, icon}) {
   return <View style={styles.container}></View>;
@@ -7,8 +8,8 @@ function NavigationBar({title, icon}) {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'blue',
-    height: 10,
+    backgroundColor: colors.White,
+    height: 50,
   },
 });
 
