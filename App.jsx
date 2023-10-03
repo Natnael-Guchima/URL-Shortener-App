@@ -11,7 +11,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import Screen from './App/component/Screen';
 
 const App = () => {
-  return <Screen />;
+  return <Screen></Screen>;
 };
 
 const styles = StyleSheet.create({});

@@ -2,12 +2,10 @@ import React from 'react';
 import {SafeAreaView, Text, View, StyleSheet} from 'react-native';
 import colors from '../../config/colors';
 
-function Screen(props) {
+function Screen({children}) {
   return (
     <SafeAreaView style={styles.safeAreaView}>
-      <View style={styles.container}>
-        <Text>screen</Text>
-      </View>
+      <View style={styles.container}>{children}</View>
     </SafeAreaView>
   );
 }
