@@ -8,12 +8,10 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
+import Screen from './App/component/Screen';
+
 const App = () => {
-  return (
-    <View>
-      <Text>hello</Text>
-    </View>
-  );
+  return <Screen />;
 };
 
 const styles = StyleSheet.create({});
