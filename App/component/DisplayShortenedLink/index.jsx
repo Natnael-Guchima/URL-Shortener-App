@@ -5,6 +5,7 @@ import colors from '../../config/colors';
 import DisplayLongURL from '../DisplayLongURL';
 import HorizontalSeparatorLine from '../HorizontalSeparatorLine';
 import DisplayShorURLText from '../DisplayShorURLText';
+import CopyButton from '../CopyButton';
 
 function DisplayShortenedLink(props) {
   return (
@@ -12,6 +13,7 @@ function DisplayShortenedLink(props) {
       <DisplayLongURL longURL={'Natnael.com@coding.com'} />
       <HorizontalSeparatorLine />
       <DisplayShorURLText />
+      <CopyButton />
     </View>
   );
 }
