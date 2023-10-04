@@ -18,7 +18,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.White,
     borderRadius: 10,
-    padding: 15,
   },
 });
 
