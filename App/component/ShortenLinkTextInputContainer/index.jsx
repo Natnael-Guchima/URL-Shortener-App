@@ -3,11 +3,13 @@ import {View, StyleSheet} from 'react-native';
 
 import colors from '../../config/colors';
 import AppTextInput from '../AppInputText';
+import ShrortenButton from '../ShortenButton';
 
 function ShortenLinkTextInputContainer(props) {
   return (
     <View style={styles.container}>
       <AppTextInput />
+      <ShrortenButton />
     </View>
   );
 }
