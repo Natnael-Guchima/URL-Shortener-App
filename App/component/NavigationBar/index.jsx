@@ -16,8 +16,12 @@ function NavigationBar({title, icon}) {
 
 const styles = StyleSheet.create({
   container: {
+    alignItems: 'center',
     backgroundColor: colors.White,
+    flexDirection: 'row-reverse',
     height: 50,
+    justifyContent: 'space-between',
+    paddingHorizontal: 10,
   },
   header: {
     fontFamily: 'Poppins-Bold',
