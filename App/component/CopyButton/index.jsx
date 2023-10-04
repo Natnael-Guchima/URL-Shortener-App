@@ -1,12 +1,12 @@
 import React from 'react';
-import {Text, TouchableHighlight, StyleSheet} from 'react-native';
+import {Text, StyleSheet, TouchableOpacity} from 'react-native';
 import colors from '../../config/colors';
 
 function CopyButton({title}) {
   return (
-    <TouchableHighlight style={styles.container}>
+    <TouchableOpacity style={styles.container}>
       <Text style={styles.text}>{title ? title : 'copy'}</Text>
-    </TouchableHighlight>
+    </TouchableOpacity>
   );
 }
 
