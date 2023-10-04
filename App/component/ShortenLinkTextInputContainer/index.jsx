@@ -19,7 +19,7 @@ function ShortenLinkTextInputContainer(props) {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.DarkViolet,
-    padding: 10,
+    padding: 20,
     borderRadius: 10,
   },
 });
