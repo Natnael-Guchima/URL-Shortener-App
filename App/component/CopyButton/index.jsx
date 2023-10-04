@@ -8,6 +8,10 @@ function CopyButton({title}) {
     <TouchableHighlight
       onPress={() => console.log('clicked copy')}
       underlayColor={colors.DarkViolet}
+      onShowUnderlay={() => {
+        setIsCopied(true);
+      }}
+      onHideUnderlay={() => setIsCopied(false)}
       style={styles.container}>
       <Text style={styles.text}>{isCopied ? 'Copied!' : 'Copy'}</Text>
     </TouchableHighlight>
