@@ -8,7 +8,11 @@ import colors from '../../config/colors';
 function NavigationBar({title, icon}) {
   return (
     <View style={styles.container}>
-      <MaterialCommunityIcons name="menu" color={colors.Gray} size={30} />
+      <MaterialCommunityIcons
+        name="menu"
+        color={colors.GrayishViolet}
+        size={30}
+      />
       <Text style={styles.header}>Shortly</Text>
     </View>
   );
@@ -26,6 +30,7 @@ const styles = StyleSheet.create({
   header: {
     fontFamily: 'Poppins-Bold',
     fontSize: 24,
+    color: colors.Black,
   },
 });
 
