@@ -14,4 +14,5 @@ export default colors = {
   VeryDarkBlue: 'hsl(255, 11%, 22%)',
   VeryDarkViolet: 'hsl(260, 8%, 14%)',
   White: '#ffffff',
+  Black: '#000000',
 };
