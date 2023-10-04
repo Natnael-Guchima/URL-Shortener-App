@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   text: {
     color: colors.Black,
     fontFamily: 'Poppins-Medium',
-    marginBottom: 15,
+    margin: 15,
   },
 });
 export default DisplayLongURL;
