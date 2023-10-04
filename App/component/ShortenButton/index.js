@@ -14,13 +14,13 @@ const styles = StyleSheet.create({
         backgroundColor: colors.Cyan,
         justifyContent: 'center',
         alignItems: 'center',
-        paddingVertical: 10,
+        paddingVertical: 15,
         borderRadius: 10
     },
     text: {
         color: colors.White,
         fontFamily: 'Poppins-Bold',
-        fontSize: 16
+        fontSize: 18
     }
 })
 export default ShrortenButton;
