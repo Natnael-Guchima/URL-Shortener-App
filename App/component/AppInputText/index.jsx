@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.White,
     borderRadius: 10,
     paddingLeft: 15,
-    paddingVertical: 10,
+    paddingVertical: 15,
   },
 });
 export default AppTextInput;
