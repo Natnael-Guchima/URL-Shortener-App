@@ -4,12 +4,14 @@ import {View, StyleSheet} from 'react-native';
 import colors from '../../config/colors';
 import DisplayLongURL from '../DisplayLongURL';
 import HorizontalSeparatorLine from '../HorizontalSeparatorLine';
+import DisplayShorURLText from '../DisplayShorURLText';
 
 function DisplayShortenedLink(props) {
   return (
     <View style={styles.container}>
       <DisplayLongURL longURL={'Natnael.com@coding.com'} />
       <HorizontalSeparatorLine />
+      <DisplayShorURLText />
     </View>
   );
 }
