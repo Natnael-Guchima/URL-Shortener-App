@@ -13,6 +13,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import Screen from './App/component/Screen';
 import NavigationBar from './App/component/NavigationBar';
 import ShortenLinkTextInputContainer from './App/component/ShortenLinkTextInputContainer';
+import DisplayShortenedLink from './App/component/DisplayShortenedLink';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <Screen>
         <NavigationBar />
         <ShortenLinkTextInputContainer />
+        <DisplayShortenedLink />
       </Screen>
     </NavigationContainer>
   );
