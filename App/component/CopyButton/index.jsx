@@ -23,6 +23,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
+    marginHorizontal: 15,
+    marginBottom: 15,
   },
 });
 export default CopyButton;
