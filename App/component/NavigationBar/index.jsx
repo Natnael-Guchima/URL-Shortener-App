@@ -8,7 +8,7 @@ import colors from '../../config/colors';
 function NavigationBar({title, icon}) {
   return (
     <View style={styles.container}>
-      <MaterialCommunityIcons name="menu" color={'red'} size={20} />
+      <MaterialCommunityIcons name="menu" color={colors.Gray} size={30} />
     </View>
   );
 }
