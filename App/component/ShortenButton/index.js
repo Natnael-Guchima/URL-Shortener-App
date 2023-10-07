@@ -2,9 +2,9 @@ import React from 'react';
 import { TouchableOpacity , Text, StyleSheet} from 'react-native';
 import colors from '../../config/colors';
 
-function ShrortenButton(props) {
+function ShrortenButton({...otherProps}) {
     return (
-     <TouchableOpacity style={styles.shortenButton}>
+     <TouchableOpacity {...otherProps} style={styles.shortenButton}>
         <Text style={styles.text}>Shorten It!</Text>
      </TouchableOpacity>
     );

@@ -2,10 +2,10 @@ import React from 'react';
 import {TextInput, StyleSheet, Platform} from 'react-native';
 import colors from '../../config/colors';
 
-function AppTextInput({inputText, ...otherProps}) {
+function AppTextInput({onChangeText, inputText, ...otherProps}) {
   return (
     <TextInput
-      {...otherProps}
+      onChangeText={value => onChangeText(value)}
       style={styles.textInput}
       placeholder="Shorten a link here..."
     />
