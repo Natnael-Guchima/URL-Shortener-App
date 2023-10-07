@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.DarkViolet,
     padding: 20,
     borderRadius: 10,
+    margin: 20,
   },
 });
 
