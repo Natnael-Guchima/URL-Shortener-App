@@ -10,16 +10,26 @@ import colors from '../../config/colors';
 
 function CopyButton({title}) {
   const [isCopied, setIsCopied] = useState(false);
+
+  const handleCopyButtonPress = () => {
+    setIsCopied(true);
+
+    setTimeout(() => setIsCopied(false), 1000);
+  };
   return (
     <TouchableWithoutFeedback
-      onPress={() => console.log('clicked copy')}
+      onPress={handleCopyButtonPress}
       // underlayColor={colors.DarkViolet}
       // onShowUnderlay={() => {
       //   setIsCopied(true);
       // }}
       // onHideUnderlay={() => setIsCopied(false)}
     >
-      <View style={styles.container}>
+      <View
+        style={[
+          styles.container,
+          {backgroundColor: isCopied ? colors.DarkViolet : colors.Cyan},
+        ]}>
         <Text style={styles.text}>{isCopied ? 'Copied!' : 'Copy'}</Text>
       </View>
     </TouchableWithoutFeedback>
@@ -35,7 +45,7 @@ const styles = StyleSheet.create({
   },
   container: {
     padding: 10,
-    backgroundColor: colors.Cyan,
+
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
