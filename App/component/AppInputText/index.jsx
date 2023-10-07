@@ -2,9 +2,13 @@ import React from 'react';
 import {TextInput, StyleSheet, Platform} from 'react-native';
 import colors from '../../config/colors';
 
-function AppTextInput({inputText}) {
+function AppTextInput({inputText, ...otherProps}) {
   return (
-    <TextInput style={styles.textInput} placeholder="Shorten a link here..." />
+    <TextInput
+      {...otherProps}
+      style={styles.textInput}
+      placeholder="Shorten a link here..."
+    />
   );
 }
 

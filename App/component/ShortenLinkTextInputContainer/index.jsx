@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, StyleSheet} from 'react-native';
 
 import colors from '../../config/colors';
@@ -7,9 +7,11 @@ import ShrortenButton from '../ShortenButton';
 import ErrorMessage from '../ErrorMessage';
 
 function ShortenLinkTextInputContainer(props) {
+  const [link, setLink] = useState('');
+
   return (
     <View style={styles.container}>
-      <AppTextInput />
+      <AppTextInput onChangeText={value => setLink(value)} />
       <ErrorMessage />
       <ShrortenButton />
     </View>
