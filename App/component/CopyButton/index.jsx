@@ -1,20 +1,28 @@
 import React, {useState} from 'react';
-import {Text, StyleSheet, TouchableHighlight} from 'react-native';
+import {
+  Text,
+  StyleSheet,
+  TouchableHighlight,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
 import colors from '../../config/colors';
 
 function CopyButton({title}) {
   const [isCopied, setIsCopied] = useState(false);
   return (
-    <TouchableHighlight
+    <TouchableWithoutFeedback
       onPress={() => console.log('clicked copy')}
-      underlayColor={colors.DarkViolet}
-      onShowUnderlay={() => {
-        setIsCopied(true);
-      }}
-      onHideUnderlay={() => setIsCopied(false)}
-      style={styles.container}>
-      <Text style={styles.text}>{isCopied ? 'Copied!' : 'Copy'}</Text>
-    </TouchableHighlight>
+      // underlayColor={colors.DarkViolet}
+      // onShowUnderlay={() => {
+      //   setIsCopied(true);
+      // }}
+      // onHideUnderlay={() => setIsCopied(false)}
+    >
+      <View style={styles.container}>
+        <Text style={styles.text}>{isCopied ? 'Copied!' : 'Copy'}</Text>
+      </View>
+    </TouchableWithoutFeedback>
   );
 }
 
