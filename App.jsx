@@ -14,6 +14,7 @@ import Screen from './App/component/Screen';
 import NavigationBar from './App/component/NavigationBar';
 import ShortenLinkTextInputContainer from './App/component/ShortenLinkTextInputContainer';
 import DisplayShortenedLink from './App/component/DisplayShortenedLink';
+import DisplayListOfShortenedURLs from './App/component/DisplayListOfShortenedURLs';
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
       <Screen>
         <NavigationBar />
         <ShortenLinkTextInputContainer />
-        <DisplayShortenedLink />
+        <DisplayListOfShortenedURLs />
       </Screen>
     </NavigationContainer>
   );
