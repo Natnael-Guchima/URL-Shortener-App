@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.White,
     borderRadius: 10,
+    marginBottom: 15,
   },
 });
 
