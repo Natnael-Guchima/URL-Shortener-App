@@ -11,6 +11,7 @@ const errorMessages = {
   1: 'Please add a link',
   2: 'Invalid URL submitted',
   3: 'Unknown error',
+  4: 'Connection failed',
 };
 
 function ShortenLinkTextInputContainer({updateListOfShortLinks}) {
@@ -20,6 +21,7 @@ function ShortenLinkTextInputContainer({updateListOfShortLinks}) {
   const onShortenButtonPress = async () => {
     const response = await getShortenedURL(link);
     //if no error and server responds with result update list of link, and set error to false
+    console.log(response);
     if (response.ok) {
       updateListOfShortLinks(response.result);
       setIsFailed('');
@@ -29,6 +31,10 @@ function ShortenLinkTextInputContainer({updateListOfShortLinks}) {
     if (!response.ok) {
       console.log(response.error_code);
       setIsFailed(response.error_code);
+    }
+
+    if (response.message) {
+      setIsFailed(4);
     }
   };
 
