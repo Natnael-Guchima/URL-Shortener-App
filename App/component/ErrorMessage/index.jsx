@@ -1,8 +1,8 @@
 import React from 'react';
 import {Text, StyleSheet} from 'react-native';
 
-function ErrorMessage(props) {
-  return <Text style={styles.errorMessage}>Please add a link</Text>;
+function ErrorMessage({error}) {
+  return <Text style={styles.errorMessage}>{error}</Text>;
 }
 const styles = StyleSheet.create({
   errorMessage: {
