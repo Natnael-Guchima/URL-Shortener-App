@@ -20,8 +20,17 @@ const App = () => {
   // list shouldn't be greater than 5
   const updateListOfShortLinks = response => {
     //add new link the first row of the array
-    console.log(response);
+
+    setListOfShortLinks(value => [response, ...value]);
+
     //if list greater than 5 pop the last item of the array
+    if (listOfShortLinks.length > 4) {
+      setListOfShortLinks(value => {
+        value.pop();
+        return value;
+      });
+    }
+    console.log(listOfShortLinks);
   };
   return (
     <NavigationContainer>
