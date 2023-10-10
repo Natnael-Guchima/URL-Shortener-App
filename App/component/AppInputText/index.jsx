@@ -8,6 +8,7 @@ function AppTextInput({onChangeText, inputText, ...otherProps}) {
       onChangeText={value => onChangeText(value)}
       style={styles.textInput}
       placeholder="Shorten a link here..."
+      placeholderTextColor={colors.Gray}
     />
   );
 }
