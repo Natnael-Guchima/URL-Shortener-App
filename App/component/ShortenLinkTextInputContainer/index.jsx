@@ -7,11 +7,17 @@ import ShrortenButton from '../ShortenButton';
 import ErrorMessage from '../ErrorMessage';
 import getShortenedURL from '../../utils/getShortenedURL';
 
-function ShortenLinkTextInputContainer(props) {
+function ShortenLinkTextInputContainer({updateListOfShortLinks}) {
   const [link, setLink] = useState('');
 
   const onShortenButtonPress = async () => {
     const response = await getShortenedURL(link);
+    //if no error and server responds with result update list of link, and set error to false
+    if (response.ok) {
+      updateListOfShortLinks(response.result);
+    }
+
+    //if error and server respodnds with error message set error message to true
     console.log(response, link);
   };
 

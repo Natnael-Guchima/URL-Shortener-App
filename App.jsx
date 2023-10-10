@@ -5,7 +5,7 @@
  * @format
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
@@ -16,11 +16,20 @@ import ShortenLinkTextInputContainer from './App/component/ShortenLinkTextInputC
 import DisplayListOfShortenedURLs from './App/component/DisplayListOfShortenedURLs';
 
 const App = () => {
+  const [listOfShortLinks, setListOfShortLinks] = useState([]);
+  // list shouldn't be greater than 5
+  const updateListOfShortLinks = response => {
+    //add new link the first row of the array
+    console.log(response);
+    //if list greater than 5 pop the last item of the array
+  };
   return (
     <NavigationContainer>
       <Screen>
         <NavigationBar />
-        <ShortenLinkTextInputContainer />
+        <ShortenLinkTextInputContainer
+          updateListOfShortLinks={updateListOfShortLinks}
+        />
         <DisplayListOfShortenedURLs />
       </Screen>
     </NavigationContainer>
