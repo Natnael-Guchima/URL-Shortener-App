@@ -10,9 +10,9 @@ import getShortenedURL from '../../utils/getShortenedURL';
 function ShortenLinkTextInputContainer(props) {
   const [link, setLink] = useState('');
 
-  const onShortenButtonPress = () => {
-    const response = getShortenedURL(link);
-    console.log(response);
+  const onShortenButtonPress = async () => {
+    const response = await getShortenedURL(link);
+    console.log(response, link);
   };
 
   const onChangeInputText = value => {
