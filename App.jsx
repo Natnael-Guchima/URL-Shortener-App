@@ -30,7 +30,6 @@ const App = () => {
         return value;
       });
     }
-    console.log(listOfShortLinks);
   };
   return (
     <NavigationContainer>

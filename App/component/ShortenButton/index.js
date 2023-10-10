@@ -1,11 +1,11 @@
 import React from 'react';
-import { TouchableOpacity , Text, StyleSheet} from 'react-native';
+import { TouchableOpacity , Text, StyleSheet, ActivityIndicator} from 'react-native';
 import colors from '../../config/colors';
 
-function ShrortenButton({...otherProps}) {
+function ShrortenButton({isLoading,...otherProps}) {
     return (
      <TouchableOpacity {...otherProps} style={styles.shortenButton}>
-        <Text style={styles.text}>Shorten It!</Text>
+        {isLoading ? <ActivityIndicator size="small" /> :<Text style={styles.text}>Shorten It!</Text>}
      </TouchableOpacity>
     );
 }

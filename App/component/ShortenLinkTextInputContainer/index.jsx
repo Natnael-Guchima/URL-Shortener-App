@@ -17,11 +17,14 @@ const errorMessages = {
 function ShortenLinkTextInputContainer({updateListOfShortLinks}) {
   const [link, setLink] = useState('');
   const [isFailed, setIsFailed] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const onShortenButtonPress = async () => {
     const response = await getShortenedURL(link);
     //if no error and server responds with result update list of link, and set error to false
     console.log(response);
+    setIsLoading(true);
+
     if (response.ok) {
       updateListOfShortLinks(response.result);
       setIsFailed('');
@@ -29,13 +32,14 @@ function ShortenLinkTextInputContainer({updateListOfShortLinks}) {
 
     //if error and server respodnds with error message set error message to true
     if (!response.ok) {
-      console.log(response.error_code);
       setIsFailed(response.error_code);
     }
 
     if (response.message) {
       setIsFailed(4);
     }
+
+    setIsLoading(false);
   };
 
   const onChangeInputText = value => {
@@ -46,7 +50,7 @@ function ShortenLinkTextInputContainer({updateListOfShortLinks}) {
     <View style={styles.container}>
       <AppTextInput onChangeText={onChangeInputText} />
       {isFailed && <ErrorMessage error={errorMessages[isFailed]} />}
-      <ShrortenButton onPress={onShortenButtonPress} />
+      <ShrortenButton isLoading={isLoading} onPress={onShortenButtonPress} />
     </View>
   );
 }
