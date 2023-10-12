@@ -4,7 +4,7 @@ import colors from '../../config/colors';
 
 function ShrortenButton({isLoading,...otherProps}) {
     return (
-     <TouchableOpacity {...otherProps} style={styles.shortenButton}>
+     <TouchableOpacity {...otherProps}  style={styles.shortenButton}>
         {isLoading ? <ActivityIndicator size="small" /> :<Text style={styles.text}>Shorten It!</Text>}
      </TouchableOpacity>
     );
